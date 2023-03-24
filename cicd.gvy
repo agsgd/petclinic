@@ -60,8 +60,8 @@ pipeline {
 	         steps {
               withDockerRegistry(credentialsId: 'DOCKER_HUB_LOGIN', url: 'https://index.docker.io/v1/') {
                     sh script: 'cd  $WORKSPACE'
-                    sh script: 'docker build --file Dockerfile --tag tanisha.azurecr.io/petapp:$BUILD_NUMBER .'
-                    sh script: 'docker push tanisha.azurecr.io/petapp:$BUILD_NUMBER'
+                    sh script: 'docker build --file Dockerfile --tag tanishaa.docker.io/petapp:$BUILD_NUMBER .'
+                    sh script: 'docker push tanishaa.docker.io/petapp:$BUILD_NUMBER'
               }	
            }		
         }
